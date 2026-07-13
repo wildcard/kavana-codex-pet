@@ -14,6 +14,18 @@ The repository contains a ready-to-install v2 pet package, source frames and row
 
 This is a community project, not an official OpenAI or Codex asset.
 
+## Inspired by Malou
+
+This standalone project was directly inspired by
+[`mySebbe/malou-codex-pet`](https://github.com/mySebbe/malou-codex-pet), which
+showed what a complete public home for a Codex pet can look like: installable
+artifacts, source frames, previews, checksums, repair tooling, releases, and
+clear privacy and licensing boundaries. Thank you, `mySebbe` and Malou. ❤️
+
+Kavana carries that full project treatment forward while preserving the newer
+Codex v2 atlas and its sixteen look directions. See the
+[Malou → Kavana parity ledger](PARITY.md) for the capability-by-capability audit.
+
 ## Install
 
 ### macOS or Linux
