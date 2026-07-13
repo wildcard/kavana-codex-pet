@@ -23,4 +23,5 @@ imagegen-jobs.json
 pet_request.json
 release/
 tmp/
+output/
 __pycache__/

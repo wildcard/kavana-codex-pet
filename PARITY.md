@@ -26,8 +26,24 @@ This ledger records the public-project capabilities reviewed from [`mySebbe/malo
 | Contribution and conduct guidance | Privacy-aware asset contribution rules | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` |
 | Security policy | Supported-version and sensitive-data reporting guidance | `SECURITY.md` |
 | Issue and pull request templates | Structured bug areas, privacy gate, and release checks | `.github/` |
-| Public landing page | Responsive animated Kavana story and installation page | `docs/` |
+| Public landing page | Responsive interactive field guide with state controls, mobile sync, full preview gallery, install UI, atlas inspection, SEO metadata, reduced-motion handling, and scroll reveals | `docs/` |
 | Public release package | Versioned GitHub release with install archive | GitHub Releases |
+
+## Website feature parity
+
+| Malou website experience | Kavana implementation |
+| --- | --- |
+| Hero story, release actions, and package facts | Kavana identity story, release/source actions, and live v2 package facts |
+| Interactive Idle, Run, Wave, Jump, and Review picker | Autonomous sequence plus Zoomies, Roam, Wave, Jump, Look, Work/Review, and Nap controls |
+| Single-state sprite loop | Duration-aware playback using Kavana’s real per-frame timings and all sixteen look frames |
+| Android/iOS screenshot story | Honest connected-host explainer, interactive mobile wake illustration, current OpenAI availability boundary, and repair links |
+| Nine hover, focus, and click previews | All nine standard states plus the v2 look-around loop, with individual and Play All controls |
+| One-platform install command panel | Keyboard-accessible macOS/Linux, Windows, and manual tabs with clipboard actions |
+| Atlas specifications and contact sheet | v2 geometry, checksum, metadata, CI, full contact sheet, and approved canonical base |
+| Scroll reveal choreography | Intersection-observed reveals with a no-JavaScript-safe visible page structure |
+| Reduced-motion video and sprite behavior | Automatic motion disabled while every action remains available as a persistent still pose |
+| Canonical, Open Graph, Twitter, and CSP metadata | Equivalent public metadata using Kavana’s canonical derived artwork |
+| Public-project provenance | Malou inspiration, Project Caro contribution, privacy boundary, attribution, licensing, and contribution paths |
 
 ## Kavana’s v2 additions
 
@@ -39,4 +55,6 @@ Kavana preserves Malou’s project-level completeness and adds newer Codex pet c
 - explicit neutral look frame
 - tenth preview covering the look-around loop
 - deterministic privacy scanning in the verifier
+- top-of-page Caro-derived zoomies, roaming, work/review, look, and rest controls
+- keyboard-accessible install tabs and a complete ten-preview interaction gallery
 - Project Caro contribution provenance and an HN launch draft

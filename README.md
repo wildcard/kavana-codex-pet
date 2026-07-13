@@ -26,6 +26,20 @@ Kavana carries that full project treatment forward while preserving the newer
 Codex v2 atlas and its sixteen look directions. See the
 [Malou → Kavana parity ledger](PARITY.md) for the capability-by-capability audit.
 
+## Interactive Website
+
+The public [Kavana field guide](https://wildcard.github.io/kavana-codex-pet/)
+combines Malou’s complete package presentation with the richer companion
+behavior Kavana contributed to Project Caro. Its top-of-page sequence loops
+through her real atlas states, or you can directly trigger zoomies, roaming,
+waving, jumping, sixteen-direction looking, working and review, or a nap.
+
+The same site includes all ten animation previews, desktop-to-mobile sync
+guidance, keyboard-accessible platform install tabs and command copying, atlas
+and canonical-base inspection, checksums, privacy boundaries, licensing, and
+the Caro contribution story. Reduced-motion preferences keep the controls and
+still previews while disabling automatic movement.
+
 ## Install
 
 ### macOS or Linux
@@ -93,7 +107,8 @@ The expected value is `selected-avatar-id = "custom:kavana"` in both `config.tom
 | `source/row-strips/` | Approved canonical base plus row-level atlas strips, including look rows |
 | `metadata/atlas.json` | Public dimensions, version, provenance, and asset checksums |
 | `scripts/rebuild-assets.py` | Rebuild public inspection assets from the shipped atlas |
-| `scripts/verify.py` | Validate package, atlas, checksums, public assets, and privacy |
+| `docs/` | Interactive field guide, complete previews, install UI, and atlas inspection |
+| `scripts/verify.py` | Validate package, website mirrors, atlas, checksums, public assets, and privacy |
 
 ## Atlas Specs
 

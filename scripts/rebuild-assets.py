@@ -176,7 +176,33 @@ def main() -> None:
     ]
     lines = [f"{sha256(path)}  {path.relative_to(ROOT).as_posix()}" for path in checksum_paths]
     (ROOT / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("Rebuilt Kavana source frames, strips, previews, metadata, contact sheet, and checksums.")
+
+    docs_assets = ROOT / "docs" / "assets"
+    docs_previews = docs_assets / "previews"
+    docs_posters = docs_assets / "posters"
+    docs_previews.mkdir(parents=True, exist_ok=True)
+    docs_posters.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ATLAS_PATH, docs_assets / "spritesheet.webp")
+    shutil.copy2(BASE_PATH, docs_assets / "canonical-base.png")
+    shutil.copy2(ROOT / "assets" / "contact-sheet.png", docs_assets / "contact-sheet.png")
+    for preview in previews_root.glob("*.mp4"):
+        shutil.copy2(preview, docs_previews / preview.name)
+    poster_sources = {
+        "idle": frames_root / "idle" / "00.png",
+        "running-right": frames_root / "running-right" / "00.png",
+        "running-left": frames_root / "running-left" / "00.png",
+        "waving": frames_root / "waving" / "00.png",
+        "jumping": frames_root / "jumping" / "00.png",
+        "failed": frames_root / "failed" / "00.png",
+        "waiting": frames_root / "waiting" / "00.png",
+        "running": frames_root / "running" / "00.png",
+        "review": frames_root / "review" / "00.png",
+        "look-around": frames_root / "look-a" / "00.png",
+    }
+    for name, source in poster_sources.items():
+        shutil.copy2(source, docs_posters / f"{name}.png")
+
+    print("Rebuilt Kavana source assets, public website media, metadata, and checksums.")
 
 
 if __name__ == "__main__":
