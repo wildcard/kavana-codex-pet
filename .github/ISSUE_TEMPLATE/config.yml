@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security policy
+    url: https://github.com/wildcard/kavana-codex-pet/security/policy
+    about: Read this before sharing sensitive information.
+  - name: Project Caro
+    url: https://github.com/wildcard/caro
+    about: Report Caro website companion issues in the Caro project.

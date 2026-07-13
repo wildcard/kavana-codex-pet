@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "pet": {
+    "id": "kavana",
+    "displayName": "Kavana",
+    "version": "1.0.0",
+    "description": "A black-and-tan Shiba Inu Codex pet contributed by the Project Caro community.",
+    "spriteVersionNumber": 2
+  },
+  "atlas": {
+    "format": "WebP",
+    "mode": "RGBA",
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "lookDirectionCount": 16,
+    "neutralLookFrame": {
+      "row": 0,
+      "column": 6
+    },
+    "sha256": "0f0ac426d9f9446348024e5e5b8a1cd33c07ca960d3776f50cff69459fd2296a"
+  },
+  "source": {
+    "project": "Project Caro",
+    "projectUrl": "https://github.com/wildcard/caro",
+    "contributionPullRequest": "https://github.com/wildcard/caro/pull/1324"
+  }
+}

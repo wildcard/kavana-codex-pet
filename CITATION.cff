@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this pet package as a reference, please cite it as below."
+title: "Kavana Codex Pet"
+version: "1.0.0"
+date-released: "2026-07-13"
+authors:
+  - family-names: "wildcard"
+repository-code: "https://github.com/wildcard/kavana-codex-pet"
+license: "MIT AND CC-BY-NC-4.0"
+abstract: "A black-and-tan Shiba Inu Codex Desktop pet with a v2 transparent WebP atlas, sixteen look directions, previews, source frames, mobile-sync helpers, and sanitized metadata."

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report an install, spritesheet, preview, metadata, or mobile-sync problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Install, Spritesheet, Look directions, Preview media, Mobile sync, Metadata, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex version
+      description: If relevant, include the Codex Desktop version you tested.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the shortest path that reproduces the problem.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I did not include credentials, private photos, raw references, prompt dumps, Codex state, or personal data.
+          required: true
