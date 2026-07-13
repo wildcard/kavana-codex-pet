@@ -153,7 +153,7 @@ def main() -> None:
         'data-action="zoomies"', 'data-action="roam"', 'data-action="wave"',
         'data-action="jump"', 'data-action="look"', 'data-action="work"',
         'data-action="sleep"', 'data-play-all', 'data-install-tab="windows"',
-        'data-wake-mobile', 'assets/contact-sheet.png',
+        'data-wake-mobile', 'data-preview-state="look"', 'assets/contact-sheet.png',
     }
     missing_experience = sorted(token for token in required_experience if token not in html)
     if missing_experience:

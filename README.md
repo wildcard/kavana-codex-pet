@@ -4,7 +4,7 @@
 [![Verify](https://github.com/wildcard/kavana-codex-pet/actions/workflows/verify.yml/badge.svg)](https://github.com/wildcard/kavana-codex-pet/actions/workflows/verify.yml)
 [![License](https://img.shields.io/badge/license-MIT%20%2B%20CC--BY--NC--4.0-blue)](LICENSE.md)
 
-[Meet Kavana](https://wildcard.github.io/kavana-codex-pet/) · [Latest release](https://github.com/wildcard/kavana-codex-pet/releases/latest) · [Project Caro](https://github.com/wildcard/caro)
+[Meet Kavana](https://kavana.caro.sh/) · [Latest release](https://github.com/wildcard/kavana-codex-pet/releases/latest) · [Caro guide](https://caro.sh/docs/kavana) · [Project Caro](https://github.com/wildcard/caro)
 
 ![Kavana's complete v2 animation atlas](assets/contact-sheet.png)
 
@@ -28,7 +28,7 @@ Codex v2 atlas and its sixteen look directions. See the
 
 ## Interactive Website
 
-The public [Kavana field guide](https://wildcard.github.io/kavana-codex-pet/)
+The public [Kavana field guide](https://kavana.caro.sh/)
 combines Malou’s complete package presentation with the richer companion
 behavior Kavana contributed to Project Caro. Its top-of-page sequence loops
 through her real atlas states, or you can directly trigger zoomies, roaming,
@@ -143,6 +143,8 @@ This public repository deliberately excludes original private photos, raw refere
 ## Community Story
 
 Kavana was hatched with Codex’s pet tooling and then contributed to Project Caro as an interactive web companion: she roams, chats, rests, sleeps, can be placed or tucked away, remembers preferences, and trots offscreen when dismissed. The standalone repository keeps the reusable Codex pet package independent while Caro keeps its community-facing experience.
+
+The next engineering step is specified in the [Codex Pet Web SDK handoff](SDK_FOLLOW_UP.md): extract this integration into a framework-neutral SDK plus a hosted skill and lean agent prompt that can add any valid Codex pet to a website.
 
 Happy Codexing. ❤️
 

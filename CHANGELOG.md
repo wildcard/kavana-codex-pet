@@ -12,6 +12,10 @@ All notable changes to Kavana Codex Pet are documented here.
 - Added accessible keyboard behavior, reduced-motion still poses, no-JavaScript content visibility, responsive mobile layouts, and social metadata.
 - Mirrored website media through the rebuild script and added website integrity checks to the cross-platform verifier.
 
+### Fixed
+
+- Replaced opaque MP4 playback in the animation gallery with the transparent release atlas, so every mood remains clean against the site background while it plays.
+
 ## [1.0.0] - 2026-07-13
 
 ### Added

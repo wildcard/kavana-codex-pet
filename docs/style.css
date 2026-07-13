@@ -406,13 +406,16 @@ h1 em, h2 em { color: var(--rust); font-weight: 500; }
 .preview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
 .preview-card { margin: 0; border: 1.5px solid var(--line-strong); border-radius: 14px; background: var(--white); overflow: hidden; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
 .preview-card:hover, .preview-card:focus-within, .preview-card.is-playing { transform: translateY(-5px) rotate(-.35deg); box-shadow: 5px 7px 0 var(--paper-deep); }
-.preview-card video { width: 100%; aspect-ratio: 1.02; object-fit: contain; padding: .7rem; background-color: #f3f1ea; background-image: linear-gradient(45deg, #e7e4da 25%, transparent 25%), linear-gradient(-45deg, #e7e4da 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e7e4da 75%), linear-gradient(-45deg, transparent 75%, #e7e4da 75%); background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-size: 16px 16px; cursor: pointer; }
+.preview-viewport { position: relative; width: 100%; aspect-ratio: 1.02; display: grid; place-items: center; overflow: hidden; background-color: #f3f1ea; background-image: linear-gradient(45deg, #e7e4da 25%, transparent 25%), linear-gradient(-45deg, #e7e4da 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e7e4da 75%), linear-gradient(-45deg, transparent 75%, #e7e4da 75%); background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-size: 16px 16px; cursor: pointer; }
+.preview-sprite { width: 192px; height: 208px; transform: scale(.92); }
+.preview-play { position: absolute; right: .65rem; bottom: .65rem; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border: 1.5px solid var(--line-strong); border-radius: 50%; background: var(--mint); box-shadow: 2px 2px 0 var(--line-strong); font-size: .62rem; transition: opacity .2s var(--ease), transform .2s var(--ease); }
+.preview-card.is-playing .preview-play { opacity: 0; transform: scale(.7); }
 .preview-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: .7rem; padding: .75rem .8rem; border-top: 1px solid var(--line); }
 .preview-card figcaption span { font-family: var(--display); font-size: 1rem; font-weight: 800; }
 .preview-card figcaption b { margin-right: .35rem; color: var(--rust); font-family: var(--mono); font-size: .55rem; }
 .preview-card figcaption small { color: var(--muted); font-size: .58rem; font-weight: 750; }
 .preview-card-wide { grid-column: span 2; }
-.preview-card-wide video { aspect-ratio: 2.08; }
+.preview-card-wide .preview-viewport { aspect-ratio: 2.08; }
 
 .install-section { display: grid; grid-template-columns: .72fr 1fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; }
 .install-copy > p:not(.eyebrow) { max-width: 33rem; color: var(--muted); line-height: 1.75; }
@@ -480,7 +483,7 @@ h1 em, h2 em { color: var(--rust); font-weight: 500; }
   .hero-playground { width: 100%; }
   .preview-grid { grid-template-columns: repeat(3, 1fr); }
   .preview-card-wide { grid-column: span 1; }
-  .preview-card-wide video { aspect-ratio: 1.02; }
+  .preview-card-wide .preview-viewport { aspect-ratio: 1.02; }
   .atlas-grid { grid-template-columns: .8fr 1fr; gap: 3rem; }
 }
 
@@ -523,7 +526,7 @@ h1 em, h2 em { color: var(--rust); font-weight: 500; }
   .phone-card { width: 180px; min-height: 360px; }
   .sync-arrow { left: 24%; top: 66%; }
   .preview-grid { grid-template-columns: 1fr; }
-  .preview-card video, .preview-card-wide video { aspect-ratio: 1.35; }
+  .preview-viewport, .preview-card-wide .preview-viewport { aspect-ratio: 1.35; }
   .command-tabs { overflow-x: auto; }
   .command-tabs button { flex: 0 0 auto; }
   .command-panel pre { font-size: .65rem; }

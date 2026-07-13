@@ -44,6 +44,13 @@
       this.element.style.backgroundPosition = `${-frame.column * 192 * this.scale}px ${-frame.row * 208 * this.scale}px`;
     }
 
+    show(stateName, frameIndex = 0) {
+      window.clearTimeout(this.timer);
+      this.stateName = states[stateName] ? stateName : 'idle';
+      this.frameIndex = frameIndex;
+      this.paint(states[this.stateName][this.frameIndex] || states[this.stateName][0]);
+    }
+
     play(stateName, { loop = true, stillFrame = 0 } = {}) {
       window.clearTimeout(this.timer);
       this.stateName = states[stateName] ? stateName : 'idle';
@@ -310,22 +317,19 @@
     const playAllButton = document.querySelector('[data-play-all]');
     if (!cards.length || !playAllButton) return;
     let playAll = false;
+    const animators = new Map(cards.map((card) => [card, new SpriteAnimator(card.querySelector('.preview-sprite'))]));
 
     const reset = (card) => {
-      const video = card.querySelector('video');
-      video.pause();
-      try { video.currentTime = 0; } catch { /* Poster remains visible before metadata loads. */ }
+      animators.get(card).show(card.dataset.previewState);
       card.classList.remove('is-playing');
       card.setAttribute('aria-pressed', 'false');
     };
 
     const play = (card) => {
       if (reducedMotion) return;
-      const video = card.querySelector('video');
-      video.play().then(() => {
-        card.classList.add('is-playing');
-        card.setAttribute('aria-pressed', 'true');
-      }).catch(() => {});
+      animators.get(card).play(card.dataset.previewState);
+      card.classList.add('is-playing');
+      card.setAttribute('aria-pressed', 'true');
     };
 
     cards.forEach((card) => {
@@ -336,7 +340,7 @@
       card.addEventListener('pointerleave', () => { if (!playAll) reset(card); });
       card.addEventListener('focusin', () => play(card));
       card.addEventListener('focusout', () => { if (!playAll) reset(card); });
-      card.addEventListener('click', () => card.classList.contains('is-playing') && !playAll ? reset(card) : play(card));
+      card.addEventListener('click', () => play(card));
       card.addEventListener('keydown', (event) => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         event.preventDefault();

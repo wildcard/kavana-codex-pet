@@ -8,18 +8,18 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
-  <link rel="canonical" href="https://wildcard.github.io/kavana-codex-pet/">
+  <link rel="canonical" href="https://kavana.caro.sh/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kavana Codex Pet">
   <meta property="og:title" content="Kavana · An interactive Codex pet">
   <meta property="og:description" content="Give Kavana the zoomies, let her roam, inspect all ten animation families, and bring this community-made Shiba Inu into Codex Desktop.">
-  <meta property="og:url" content="https://wildcard.github.io/kavana-codex-pet/">
-  <meta property="og:image" content="https://wildcard.github.io/kavana-codex-pet/assets/canonical-base.png">
+  <meta property="og:url" content="https://kavana.caro.sh/">
+  <meta property="og:image" content="https://kavana.caro.sh/assets/canonical-base.png">
   <meta property="og:image:alt" content="Kavana, a pixel-art black-and-tan Shiba Inu Codex pet">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kavana · An interactive Codex pet">
   <meta name="twitter:description" content="A community-made v2 Codex pet with zoomies, roaming, sixteen look directions, and a complete public package.">
-  <meta name="twitter:image" content="https://wildcard.github.io/kavana-codex-pet/assets/canonical-base.png">
+  <meta name="twitter:image" content="https://kavana.caro.sh/assets/canonical-base.png">
   <title>Kavana · Interactive Codex Pet</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2252%22 font-size=%2252%22>🐕</text></svg>">
   <link rel="stylesheet" href="style.css">
@@ -188,44 +188,44 @@
         </div>
       </div>
       <div class="preview-grid shell">
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/idle.mp4" poster="assets/posters/idle.png" muted loop playsinline preload="metadata" aria-label="Kavana idle animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="idle" aria-label="Play Kavana idle animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>01</b> Idle</span><small>breath + tail</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/running-right.mp4" poster="assets/posters/running-right.png" muted loop playsinline preload="metadata" aria-label="Kavana running right animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="runRight" aria-label="Play Kavana running right animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>02</b> Run right</span><small>zoomies →</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/running-left.mp4" poster="assets/posters/running-left.png" muted loop playsinline preload="metadata" aria-label="Kavana running left animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="runLeft" aria-label="Play Kavana running left animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>03</b> Run left</span><small>← more zoomies</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/waving.mp4" poster="assets/posters/waving.png" muted loop playsinline preload="metadata" aria-label="Kavana waving animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="wave" aria-label="Play Kavana waving animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>04</b> Wave</span><small>hello, human</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/jumping.mp4" poster="assets/posters/jumping.png" muted loop playsinline preload="metadata" aria-label="Kavana jumping animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="jump" aria-label="Play Kavana jumping animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>05</b> Jump</span><small>tiny victory</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/failed.mp4" poster="assets/posters/failed.png" muted loop playsinline preload="metadata" aria-label="Kavana failed animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="failed" aria-label="Play Kavana failed animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>06</b> Failed</span><small>something broke</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/waiting.mp4" poster="assets/posters/waiting.png" muted loop playsinline preload="metadata" aria-label="Kavana waiting animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="waiting" aria-label="Play Kavana waiting animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>07</b> Waiting</span><small>your move</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/running.mp4" poster="assets/posters/running.png" muted loop playsinline preload="metadata" aria-label="Kavana working animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="work" aria-label="Play Kavana working animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>08</b> Working</span><small>task in motion</small></figcaption>
         </figure>
-        <figure class="preview-card reveal" data-preview>
-          <video src="assets/previews/review.mp4" poster="assets/posters/review.png" muted loop playsinline preload="metadata" aria-label="Kavana review animation"></video>
+        <figure class="preview-card reveal" data-preview data-preview-state="review" aria-label="Play Kavana review animation">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>09</b> Review</span><small>checking twice</small></figcaption>
         </figure>
-        <figure class="preview-card preview-card-wide reveal" data-preview>
-          <video src="assets/previews/look-around.mp4" poster="assets/posters/look-around.png" muted loop playsinline preload="metadata" aria-label="Kavana looking in sixteen directions"></video>
+        <figure class="preview-card preview-card-wide reveal" data-preview data-preview-state="look" aria-label="Play Kavana looking in sixteen directions">
+          <div class="preview-viewport" aria-hidden="true"><span class="sprite preview-sprite"></span><span class="preview-play">▶</span></div>
           <figcaption><span><b>10</b> Look around</span><small>16 clockwise directions · Codex v2</small></figcaption>
         </figure>
       </div>
@@ -307,6 +307,7 @@ Copy dist/kavana/spritesheet.webp
         <div class="community-copy">
           <p>Kavana was hatched with Codex pet tooling, inspired by <a href="https://github.com/mySebbe/malou-codex-pet">Malou’s excellent public project</a>, and contributed back to Project Caro. This is a community project—not an official OpenAI or Codex asset.</p>
           <div class="community-links">
+            <a href="https://caro.sh/docs/kavana"><span>Caro field guide</span><small>Community integration →</small></a>
             <a href="https://github.com/wildcard/kavana-codex-pet/blob/main/CONTRIBUTING.md"><span>Contribute</span><small>Build with us →</small></a>
             <a href="https://github.com/wildcard/kavana-codex-pet/blob/main/ATTRIBUTION.md"><span>Attribution</span><small>Credits + provenance →</small></a>
             <a href="https://github.com/wildcard/kavana-codex-pet/blob/main/LICENSE.md"><span>License</span><small>MIT + CC BY-NC 4.0 →</small></a>
@@ -320,7 +321,7 @@ Copy dist/kavana/spritesheet.webp
   <footer class="footer shell">
     <div class="footer-pet" aria-hidden="true"><span class="sprite sprite-footer" data-footer-sprite></span></div>
     <div><strong>Kavana Codex Pet</strong><span>כוונה · intention</span></div>
-    <div><span>Project Caro community contribution</span><a href="https://github.com/wildcard/kavana-codex-pet">GitHub repository ↗</a></div>
+    <div><span>Project Caro community contribution</span><a href="https://caro.sh/docs/kavana">Caro installation guide ↗</a><a href="https://github.com/wildcard/kavana-codex-pet">GitHub repository ↗</a></div>
     <p>Happy Codexing <span aria-hidden="true">❤️</span></p>
   </footer>
 
