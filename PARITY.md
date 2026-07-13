@@ -13,11 +13,11 @@ This ledger records the public-project capabilities reviewed from [`mySebbe/malo
 | Nine standard state animations | All nine v2 standard rows | `source/frames/`, `source/row-strips/` |
 | Status-readable poses | Distinct failed, waiting, working, and review body-pose families | `assets/previews/` |
 | Source frames | Curated transparent frames regenerated from the release atlas | `source/frames/` |
-| Source row strips | Nine standard rows, neutral frame, and two look rows | `source/row-strips/` |
+| Source row strips and canonical base | Approved identity render, nine standard rows, neutral frame, and two look rows | `source/row-strips/` |
 | Contact sheet | Labeled full 8×11 atlas inspection sheet | `assets/contact-sheet.png` |
 | Per-state MP4 previews | All nine standard states plus look-around | `assets/previews/` |
-| Sanitized atlas metadata | Version, geometry, checksum, provenance, and Caro contribution | `metadata/atlas.json` |
-| Package checksums | SHA-256 for manifest, atlas, and contact sheet | `SHA256SUMS.txt` |
+| Sanitized atlas metadata | Version, geometry, checksums, canonical base, provenance, and Caro contribution | `metadata/atlas.json` |
+| Package checksums | SHA-256 for manifest, atlas, contact sheet, and canonical base | `SHA256SUMS.txt` |
 | Verification script | Cross-platform package, atlas, checksum, source, preview, and privacy validation | `scripts/verify.py`, `.github/workflows/verify.yml` |
 | Asset rebuild script | Deterministic source frames, strips, contact sheet, previews, metadata, and checksums | `scripts/rebuild-assets.py` |
 | Release notes and changelog | Standalone v1.0.0 release documentation | `RELEASE_NOTES.md`, `CHANGELOG.md` |

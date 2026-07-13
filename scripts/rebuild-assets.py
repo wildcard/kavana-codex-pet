@@ -14,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 ATLAS_PATH = ROOT / "dist" / "kavana" / "spritesheet.webp"
+BASE_PATH = ROOT / "source" / "row-strips" / "base.png"
 CELL_W, CELL_H = 192, 208
 ROWS = [
     ("idle", 0, 6, [280, 110, 110, 140, 140, 320]),
@@ -48,7 +49,9 @@ def save_preview(name: str, frames: list[Image.Image], durations: list[int]) -> 
         temp = Path(temp_dir)
         concat_lines: list[str] = []
         expanded: list[Image.Image] = []
-        for frame, duration in zip(frames, durations, strict=True):
+        if len(frames) != len(durations):
+            raise ValueError(f"frame/duration mismatch for {name}")
+        for frame, duration in zip(frames, durations):
             expanded.extend([frame] * max(1, round(duration / 40)))
         expanded.extend(expanded[: min(4, len(expanded))])
         for index, frame in enumerate(expanded):
@@ -156,6 +159,10 @@ def main() -> None:
             "project": "Project Caro",
             "projectUrl": "https://github.com/wildcard/caro",
             "contributionPullRequest": "https://github.com/wildcard/caro/pull/1324",
+            "canonicalBase": {
+                "path": "source/row-strips/base.png",
+                "sha256": sha256(BASE_PATH),
+            },
         },
     }
     (ROOT / "metadata").mkdir(exist_ok=True)
@@ -165,6 +172,7 @@ def main() -> None:
         ROOT / "dist" / "kavana" / "spritesheet.webp",
         ROOT / "dist" / "kavana" / "pet.json",
         ROOT / "assets" / "contact-sheet.png",
+        BASE_PATH,
     ]
     lines = [f"{sha256(path)}  {path.relative_to(ROOT).as_posix()}" for path in checksum_paths]
     (ROOT / "SHA256SUMS.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")

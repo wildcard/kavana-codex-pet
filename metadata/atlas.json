@@ -26,6 +26,10 @@
   "source": {
     "project": "Project Caro",
     "projectUrl": "https://github.com/wildcard/caro",
-    "contributionPullRequest": "https://github.com/wildcard/caro/pull/1324"
+    "contributionPullRequest": "https://github.com/wildcard/caro/pull/1324",
+    "canonicalBase": {
+      "path": "source/row-strips/base.png",
+      "sha256": "405a771943fd9ec1da4e0c762ecade7b28fd8134672b5e057c7cf8c99c061284"
+    }
   }
 }

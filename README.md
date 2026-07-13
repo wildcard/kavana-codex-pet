@@ -90,8 +90,8 @@ The expected value is `selected-avatar-id = "custom:kavana"` in both `config.tom
 | `assets/contact-sheet.png` | Labeled visual overview of the 8×11 atlas |
 | `assets/previews/` | Short MP4 previews for every animation family |
 | `source/frames/` | Curated transparent frame sources |
-| `source/row-strips/` | Row-level atlas strips, including look rows |
-| `metadata/atlas.json` | Public dimensions, version, provenance, and checksum |
+| `source/row-strips/` | Approved canonical base plus row-level atlas strips, including look rows |
+| `metadata/atlas.json` | Public dimensions, version, provenance, and asset checksums |
 | `scripts/rebuild-assets.py` | Rebuild public inspection assets from the shipped atlas |
 | `scripts/verify.py` | Validate package, atlas, checksums, public assets, and privacy |
 

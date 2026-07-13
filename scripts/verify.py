@@ -39,6 +39,7 @@ def main() -> None:
     manifest_path = ROOT / "dist" / "kavana" / "pet.json"
     atlas_path = ROOT / "dist" / "kavana" / "spritesheet.webp"
     metadata_path = ROOT / "metadata" / "atlas.json"
+    base_path = ROOT / "source" / "row-strips" / "base.png"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
     if manifest.get("id") != "kavana" or manifest.get("displayName") != "Kavana":
@@ -54,6 +55,14 @@ def main() -> None:
     atlas_hash = sha256(atlas_path)
     if metadata["atlas"]["sha256"] != atlas_hash:
         fail("metadata atlas checksum mismatch")
+    with Image.open(base_path) as base:
+        if base.size != (1205, 1305) or base.mode not in {"RGB", "RGBA"}:
+            fail(f"canonical base must be RGB/RGBA 1205x1305, got {base.mode} {base.size}")
+    if metadata["source"]["canonicalBase"] != {
+        "path": "source/row-strips/base.png",
+        "sha256": sha256(base_path),
+    }:
+        fail("canonical base metadata mismatch")
 
     sums: dict[str, str] = {}
     for line in (ROOT / "SHA256SUMS.txt").read_text(encoding="utf-8").splitlines():

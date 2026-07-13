@@ -1,3 +1,4 @@
 0f0ac426d9f9446348024e5e5b8a1cd33c07ca960d3776f50cff69459fd2296a  dist/kavana/spritesheet.webp
 32f03af1241b7ac1ccfff63e4d6b3332780a98e438b14997bcb0e43ff02d02e2  dist/kavana/pet.json
 ab02111bfa0df91f71ddc0c5022c4c7d5872609c8639966a32eefbf225382f1e  assets/contact-sheet.png
+405a771943fd9ec1da4e0c762ecade7b28fd8134672b5e057c7cf8c99c061284  source/row-strips/base.png
