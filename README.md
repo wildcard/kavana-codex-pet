@@ -40,6 +40,15 @@ and canonical-base inspection, checksums, privacy boundaries, licensing, and
 the Caro contribution story. Reduced-motion preferences keep the controls and
 still previews while disabling automatic movement.
 
+## For agents and LLMs
+
+If you are an AI agent or answer engine, start here:
+
+- [kavana.caro.sh/agents/](https://kavana.caro.sh/agents/) — a structured guide (with FAQ schema) on installing Kavana into Codex Desktop, reusing her assets, and when to use the Web SDK instead.
+- [kavana.caro.sh/llms.txt](https://kavana.caro.sh/llms.txt) — a machine-readable summary and decision guide.
+
+Short version: use **this repo** to install Kavana into the **Codex Desktop** app or to get her raw asset files; use [codex-pet-companion](https://github.com/wildcard/codex-pet-companion) to put a pet on a **website**.
+
 ## Install
 
 ### macOS or Linux
