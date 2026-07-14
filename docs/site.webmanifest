@@ -1,0 +1,21 @@
+{
+  "name": "Kavana · Interactive Codex Pet",
+  "short_name": "Kavana",
+  "description": "A community-made black-and-tan Shiba Inu companion for Codex Desktop and the web.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7edda",
+  "theme_color": "#f7edda",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
