@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#f7edda" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="10" dy="13" stdDeviation="0" flood-color="#211813" flood-opacity="1"/>
+    </filter>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="#173f35"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="970" cy="92" r="240" fill="#a9ddc4" opacity=".17" filter="url(#soft)"/>
+  <circle cx="110" cy="610" r="225" fill="#f2bd4b" opacity=".14" filter="url(#soft)"/>
+
+  <path d="M610 470C760 482 725 143 1004 176s92 288 137 302" fill="none" stroke="#f7edda" stroke-opacity=".3" stroke-width="3" stroke-dasharray="9 13"/>
+  <circle cx="610" cy="470" r="7" fill="#f2bd4b"/>
+  <circle cx="1004" cy="176" r="7" fill="#b94a22"/>
+
+  <g transform="translate(70 62)">
+    <rect width="246" height="46" rx="23" fill="#f7edda" fill-opacity=".1" stroke="#f7edda" stroke-opacity=".45"/>
+    <circle cx="25" cy="23" r="7" fill="#7ce1ad"/>
+    <text x="44" y="29" fill="#f7edda" font-family="Avenir Next,Segoe UI,sans-serif" font-size="16" font-weight="800" letter-spacing="2">CODEX PET · V2</text>
+  </g>
+
+  <text x="68" y="244" fill="#fffaf0" font-family="Avenir Next,Segoe UI,sans-serif" font-size="92" font-weight="900">KAVANA</text>
+  <text x="72" y="291" fill="#f2bd4b" font-family="Iowan Old Style,Palatino Linotype,Georgia,serif" font-size="31" font-style="italic">Intention, with zoomies.</text>
+  <text x="72" y="357" fill="#f7edda" font-family="Avenir Next,Segoe UI,sans-serif" font-size="28" font-weight="700">The black-and-tan Shiba for Codex.</text>
+  <text x="72" y="405" fill="#d7e9df" font-family="Avenir Next,Segoe UI,sans-serif" font-size="21">Install her on desktop. Bring her to any website.</text>
+
+  <g transform="translate(72 478)">
+    <rect width="205" height="52" rx="26" fill="#f2bd4b" stroke="#211813" stroke-width="3"/>
+    <text x="102.5" y="33" text-anchor="middle" fill="#211813" font-family="Avenir Next,Segoe UI,sans-serif" font-size="17" font-weight="900">9 ANIMATIONS</text>
+    <rect x="220" width="238" height="52" rx="26" fill="#fffaf0" fill-opacity=".12" stroke="#fffaf0" stroke-opacity=".55" stroke-width="2"/>
+    <text x="339" y="33" text-anchor="middle" fill="#fffaf0" font-family="Avenir Next,Segoe UI,sans-serif" font-size="17" font-weight="900">16 CURIOUS LOOKS</text>
+  </g>
+
+  <path d="M820 111H1132Q1157 111 1157 136V536H805V136Q805 111 820 111Z" fill="#211813" transform="translate(10 13)"/>
+  <g transform="translate(790 82) scale(.91)">
+    <path d="M26 28Q34 6 58 10L361 31Q385 33 384 58L367 453Q366 477 341 475L36 454Q12 452 14 427Z" fill="#f7edda" stroke="#211813" stroke-width="5"/>
+    <path d="M44 67H351V394H44Z" fill="#a9ddc4"/>
+    <path d="M44 323Q120 300 191 328t160-4v70H44Z" fill="#e3c47e"/>
+    <image x="91" y="113" width="242" height="262" image-rendering="pixelated" xlink:href="posters/waving.png"/>
+    <text x="57" y="432" fill="#843117" font-family="Avenir Next,Segoe UI,sans-serif" font-size="15" font-weight="900" letter-spacing="1.2">PURPOSEFUL ZOOMIES INCLUDED</text>
+  </g>
+
+  <text x="72" y="590" fill="#f7edda" fill-opacity=".65" font-family="SFMono-Regular,Consolas,monospace" font-size="17">kavana.pet  ·  open source  ·  community-made</text>
+</svg>

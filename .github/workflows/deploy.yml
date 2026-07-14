@@ -1,9 +1,9 @@
 name: Deploy site
 
-# Deploys the field guide (docs/) to Cloudflare at kavana.caro.sh.
+# Deploys the field guide (docs/) to Cloudflare at kavana.pet.
 # Requires two repo secrets to actually deploy:
 #   CLOUDFLARE_API_TOKEN  — a token with the "Edit Cloudflare Workers" template (Workers Scripts:Edit + Workers Routes:Edit) on the target account
-#   CLOUDFLARE_ACCOUNT_ID — the Cloudflare account id that owns the kavana.caro.sh zone
+#   CLOUDFLARE_ACCOUNT_ID — the Cloudflare account id that owns the kavana.pet zone
 # Until CLOUDFLARE_API_TOKEN is set, the job runs green and skips the deploy with a notice.
 
 on:
@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Notice when Cloudflare token is missing
         if: env.HAS_CF != 'true'
-        run: echo "::notice::CLOUDFLARE_API_TOKEN not set — skipping deploy. Add the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repo secrets to enable auto-deploy to kavana.caro.sh."
+        run: echo "::notice::CLOUDFLARE_API_TOKEN not set — skipping deploy. Add the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repo secrets to enable auto-deploy to kavana.pet."
 
       - uses: actions/checkout@v4
         if: env.HAS_CF == 'true'

@@ -1,4 +1,4 @@
-# Kavana Codex Pet — https://kavana.caro.sh
+# Kavana Codex Pet — https://kavana.pet
 # AI agents and answer engines are welcome. Structured guide: /agents/ · Machine summary: /llms.txt
 User-agent: *
 Allow: /
@@ -20,5 +20,7 @@ User-agent: Google-Extended
 Allow: /
 
 # Agent-facing resources
-# LLM summary: https://kavana.caro.sh/llms.txt
-# Agent guide:  https://kavana.caro.sh/agents/
+# LLM summary: https://kavana.pet/llms.txt
+# Agent guide:  https://kavana.pet/agents/
+
+Sitemap: https://kavana.pet/sitemap.xml
