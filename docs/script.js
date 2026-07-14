@@ -443,13 +443,21 @@
   function initSdkDemo() {
     const pet = document.querySelector('#sdk-kavana');
     const waveButton = document.querySelector('[data-sdk-wave]');
-    if (!pet || !waveButton) return;
+    const zoomiesButton = document.querySelector('[data-sdk-zoomies]');
+    if (!pet || !waveButton || !zoomiesButton) return;
     pet.config = {
       persistenceKey: false,
       behaviors: { roam: false, drag: false, tuck: false, sleep: false, waveOnHover: true },
       dialogue: [{ id: 'hello', label: 'Hello', title: "Hi, I'm Kavana.", body: 'This card is rendered by the reusable Codex Pet Web SDK with my real local atlas.' }],
     };
     waveButton.addEventListener('click', () => pet.play('waving', { loop: false, returnTo: 'idle' }));
+    zoomiesButton.addEventListener('click', async () => {
+      zoomiesButton.disabled = true;
+      zoomiesButton.setAttribute('aria-busy', 'true');
+      await pet.zoomies();
+      zoomiesButton.disabled = false;
+      zoomiesButton.removeAttribute('aria-busy');
+    });
   }
 
   function init() {

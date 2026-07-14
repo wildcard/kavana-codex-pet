@@ -304,8 +304,11 @@ Copy dist/kavana/spritesheet.webp
         <p class="eyebrow">Codex Pet Web SDK</p>
         <h2 id="sdk-title">Kavana can visit<br><em>any website.</em></h2>
         <p>The reusable companion behind this live card accepts any valid Codex <code>pet.json</code> and transparent atlas. Install the npm package, use one custom element, or hand the hosted skill to a coding agent.</p>
-        <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.1.1/dist/codex-pet-companion.global.js"&gt;&lt;/script&gt;
+        <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.2.0/dist/codex-pet-companion.global.js"
+  integrity="sha384-SgmWdXBrWbTzInIB9a/nFYUPqB8DzfB+WDQl5wneLvUHw/L7BWcWSwwp2UZ6/UKV"
+  crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;codex-pet-companion&gt;&lt;/codex-pet-companion&gt;</code></pre>
+        <p class="sdk-network-note"><strong>CDN quick-start:</strong> the bare element loads Kavana’s default manifest and atlas from unpkg. For strict-CSP self-hosting, host all three files and set <code>manifest-url</code> plus <code>atlas-url</code> explicitly, as this live card does.</p>
         <div class="inline-links">
           <a href="https://pets.caro.sh">Try the SDK field guide</a>
           <a href="https://github.com/wildcard/codex-pet-companion">Open the SDK source</a>
@@ -314,7 +317,10 @@ Copy dist/kavana/spritesheet.webp
       <div class="sdk-demo reveal">
         <span class="sdk-label">Live SDK instance · local assets</span>
         <codex-pet-companion id="sdk-kavana" mode="inline" manifest-url="assets/pet.json" atlas-url="assets/spritesheet.webp"></codex-pet-companion>
-        <button type="button" data-sdk-wave>Ask the SDK to wave</button>
+        <div class="sdk-actions">
+          <button type="button" data-sdk-wave>Ask the SDK to wave</button>
+          <button type="button" data-sdk-zoomies>Send Kavana roaming</button>
+        </div>
       </div>
     </section>
 
