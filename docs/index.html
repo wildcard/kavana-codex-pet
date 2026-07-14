@@ -36,6 +36,7 @@
       <a href="#meet">Meet her</a>
       <a href="#animations">Animations</a>
       <a href="#install">Install</a>
+      <a href="#web-sdk">Web SDK</a>
       <a href="https://github.com/wildcard/kavana-codex-pet">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -298,6 +299,25 @@ Copy dist/kavana/spritesheet.webp
       </div>
     </section>
 
+    <section class="sdk-section shell section" id="web-sdk" aria-labelledby="sdk-title">
+      <div class="sdk-copy reveal">
+        <p class="eyebrow">Codex Pet Web SDK</p>
+        <h2 id="sdk-title">Kavana can visit<br><em>any website.</em></h2>
+        <p>The reusable companion behind this live card accepts any valid Codex <code>pet.json</code> and transparent atlas. Install the npm package, use one custom element, or hand the hosted skill to a coding agent.</p>
+        <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.1.0/dist/codex-pet-companion.global.js"&gt;&lt;/script&gt;
+&lt;codex-pet-companion&gt;&lt;/codex-pet-companion&gt;</code></pre>
+        <div class="inline-links">
+          <a href="https://pets.caro.sh">Try the SDK field guide</a>
+          <a href="https://github.com/wildcard/codex-pet-companion">Open the SDK source</a>
+        </div>
+      </div>
+      <div class="sdk-demo reveal">
+        <span class="sdk-label">Live SDK instance · local assets</span>
+        <codex-pet-companion id="sdk-kavana" mode="inline" manifest-url="assets/pet.json" atlas-url="assets/spritesheet.webp"></codex-pet-companion>
+        <button type="button" data-sdk-wave>Ask the SDK to wave</button>
+      </div>
+    </section>
+
     <section class="community-section shell section" aria-labelledby="community-title">
       <div class="community-card reveal">
         <div>
@@ -326,6 +346,7 @@ Copy dist/kavana/spritesheet.webp
   </footer>
 
   <p class="motion-note" data-motion-note hidden>Animation is paused because your device requests reduced motion. Every control remains available as a still preview.</p>
+  <script src="assets/codex-pet-companion.global.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
