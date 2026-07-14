@@ -4,7 +4,7 @@
 [![Verify](https://github.com/wildcard/kavana-codex-pet/actions/workflows/verify.yml/badge.svg)](https://github.com/wildcard/kavana-codex-pet/actions/workflows/verify.yml)
 [![License](https://img.shields.io/badge/license-MIT%20%2B%20CC--BY--NC--4.0-blue)](LICENSE.md)
 
-[Meet Kavana](https://kavana.caro.sh/) · [Latest release](https://github.com/wildcard/kavana-codex-pet/releases/latest) · [Caro guide](https://caro.sh/docs/kavana) · [Project Caro](https://github.com/wildcard/caro)
+[Meet Kavana](https://kavana.pet/) · [Latest release](https://github.com/wildcard/kavana-codex-pet/releases/latest) · [Caro guide](https://caro.sh/docs/kavana) · [Project Caro](https://github.com/wildcard/caro)
 
 ![Kavana's complete v2 animation atlas](assets/contact-sheet.png)
 
@@ -28,7 +28,7 @@ Codex v2 atlas and its sixteen look directions. See the
 
 ## Interactive Website
 
-The public [Kavana field guide](https://kavana.caro.sh/)
+The public [Kavana field guide](https://kavana.pet/)
 combines Malou’s complete package presentation with the richer companion
 behavior Kavana contributed to Project Caro. Its top-of-page sequence loops
 through her real atlas states, or you can directly trigger zoomies, roaming,
