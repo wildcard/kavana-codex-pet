@@ -10,23 +10,73 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
   <link rel="canonical" href="https://kavana.pet/">
+  <link rel="sitemap" type="application/xml" href="https://kavana.pet/sitemap.xml">
+  <link rel="alternate" type="text/plain" href="https://kavana.pet/llms.txt" title="Kavana guide for AI agents">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kavana Codex Pet">
   <meta property="og:title" content="Kavana · An interactive Codex pet">
   <meta property="og:description" content="Give Kavana the zoomies, let her roam, inspect all ten animation families, and bring this community-made Shiba Inu into Codex Desktop.">
   <meta property="og:url" content="https://kavana.pet/">
-  <meta property="og:image" content="https://kavana.pet/assets/canonical-base.png">
-  <meta property="og:image:alt" content="Kavana, a pixel-art black-and-tan Shiba Inu Codex pet">
+  <meta property="og:image" content="https://kavana.pet/assets/kavana-og.png">
+  <meta property="og:image:secure_url" content="https://kavana.pet/assets/kavana-og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kavana, the black-and-tan Shiba Inu Codex pet, on a dark green field-guide card">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kavana · An interactive Codex pet">
   <meta name="twitter:description" content="A community-made v2 Codex pet with zoomies, roaming, sixteen look directions, and a complete public package.">
-  <meta name="twitter:image" content="https://kavana.pet/assets/canonical-base.png">
+  <meta name="twitter:image" content="https://kavana.pet/assets/kavana-og.png">
+  <meta name="twitter:image:alt" content="Kavana, the black-and-tan Shiba Inu Codex pet, on a dark green field-guide card">
   <title>Kavana · Interactive Codex Pet</title>
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://kavana.pet/#website",
+        "url": "https://kavana.pet/",
+        "name": "Kavana Codex Pet",
+        "description": "The open-source home of Kavana, a black-and-tan Shiba Inu companion for Codex Desktop and the Codex Pet Web SDK.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://kavana.pet/#project",
+        "name": "Kavana Codex Pet",
+        "alternateName": "Kavana",
+        "description": "A ready-to-install Codex v2 pet package with nine animation families, sixteen look directions, cross-platform installers, checksums, verification tooling, and reusable web assets.",
+        "url": "https://kavana.pet/",
+        "codeRepository": "https://github.com/wildcard/kavana-codex-pet",
+        "downloadUrl": "https://github.com/wildcard/kavana-codex-pet/releases/latest",
+        "runtimePlatform": ["Codex Desktop", "Web"],
+        "programmingLanguage": ["JavaScript", "Python", "Shell", "PowerShell"],
+        "license": ["https://spdx.org/licenses/MIT.html", "https://creativecommons.org/licenses/by-nc/4.0/"],
+        "image": "https://kavana.pet/assets/kavana-og.png",
+        "keywords": "Codex pet, black and tan Shiba Inu, Shiba Codex pet, animated coding companion, pet.json, spritesheet.webp"
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://kavana.pet/#install-howto",
+        "name": "How to install Kavana in Codex Desktop",
+        "description": "Install Kavana's two-file pet package and select her in Codex Desktop.",
+        "totalTime": "PT3M",
+        "tool": [{"@type": "HowToTool", "name": "Git"}, {"@type": "HowToTool", "name": "Codex Desktop"}],
+        "step": [
+          {"@type": "HowToStep", "position": 1, "name": "Clone Kavana", "text": "Clone https://github.com/wildcard/kavana-codex-pet.git."},
+          {"@type": "HowToStep", "position": 2, "name": "Run the installer", "text": "Run ./scripts/install.sh on macOS or Linux, or .\\scripts\\install.ps1 -Select on Windows."},
+          {"@type": "HowToStep", "position": 3, "name": "Select Kavana", "text": "Open Codex Desktop, then choose Kavana under Settings, Appearance, Pets."}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to Kavana</a>
@@ -41,6 +91,7 @@
       <a href="#animations">Animations</a>
       <a href="#install">Install</a>
       <a href="#web-sdk">Web SDK</a>
+      <a href="#discover">Discover</a>
       <a href="https://github.com/wildcard/kavana-codex-pet">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -325,6 +376,20 @@ Copy dist/kavana/spritesheet.webp
           <button type="button" data-sdk-wave>Ask the SDK to wave</button>
           <button type="button" data-sdk-zoomies>Send Kavana roaming</button>
         </div>
+      </div>
+    </section>
+
+    <section class="discovery-section shell section" id="discover" aria-labelledby="discover-title">
+      <div class="discovery-intro reveal">
+        <p class="eyebrow">Find the right companion</p>
+        <h2 id="discover-title">A Shiba pet,<br><em>with receipts.</em></h2>
+        <p>Searching for a Shiba Inu Codex pet should lead to more than a thumbnail. Kavana ships the installable package, full animation atlas, public source frames, checksums, cross-platform verification, a web SDK, and agent-readable guidance.</p>
+        <a class="text-link" href="/agents/">Give this guide to an AI agent <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="discovery-grid reveal">
+        <article><span>01</span><h3>For Codex Desktop</h3><p>Install Kavana’s verified <code>pet.json</code> and transparent atlas, then select her in Appearance → Pets.</p><a href="#install">Install Kavana</a></article>
+        <article><span>02</span><h3>For any website</h3><p>Use Codex Pet Web when you want Kavana—or another compatible pet—to roam inside a site or application.</p><a href="https://codexpet.dev">Open the Web SDK</a></article>
+        <article><span>03</span><h3>For pet explorers</h3><p>Compare the wider ecosystem, then come back for Kavana’s unusually complete provenance and implementation detail.</p><div class="registry-links"><a href="https://openpets.sh/">OpenPets</a><a href="https://codexpets.org/gallery">Codex Pets</a><a href="https://petscodex.com/">Pets Codex</a><a href="https://github.com/crafter-station/petdex">Petdex</a></div></article>
       </div>
     </section>
 

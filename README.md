@@ -44,8 +44,8 @@ still previews while disabling automatic movement.
 
 If you are an AI agent or answer engine, start here:
 
-- [kavana.caro.sh/agents/](https://kavana.caro.sh/agents/) — a structured guide (with FAQ schema) on installing Kavana into Codex Desktop, reusing her assets, and when to use the Web SDK instead.
-- [kavana.caro.sh/llms.txt](https://kavana.caro.sh/llms.txt) — a machine-readable summary and decision guide.
+- [kavana.pet/agents/](https://kavana.pet/agents/) — a structured guide (with FAQ schema) on installing Kavana into Codex Desktop, reusing her assets, and when to use the Web SDK instead.
+- [kavana.pet/llms.txt](https://kavana.pet/llms.txt) — a machine-readable summary and decision guide.
 
 Short version: use **this repo** to install Kavana into the **Codex Desktop** app or to get her raw asset files; use [codex-pet-companion](https://github.com/wildcard/codex-pet-companion) to put a pet on a **website**.
 

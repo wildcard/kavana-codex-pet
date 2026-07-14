@@ -113,6 +113,14 @@ def main() -> None:
 
     parser = WebsiteReferenceParser()
     html = website_html.read_text(encoding="utf-8")
+    for required in (
+        '<link rel="canonical" href="https://kavana.pet/">',
+        'https://kavana.pet/assets/kavana-og.png',
+        '<script type="application/ld+json">',
+        'https://kavana.pet/llms.txt',
+    ):
+        if required not in html:
+            fail(f"missing discovery metadata: {required}")
     parser.feed(html)
     if parser.duplicate_ids:
         fail(f"duplicate website ids: {', '.join(sorted(parser.duplicate_ids))}")
@@ -120,9 +128,20 @@ def main() -> None:
         parsed = urlparse(reference)
         if parsed.scheme or reference.startswith(("#", "data:")):
             continue
-        path = docs_root / parsed.path
+        local_path = parsed.path.lstrip("/")
+        if parsed.path.endswith("/"):
+            local_path += "index.html"
+        path = docs_root / local_path
         if not path.is_file():
             fail(f"missing local website reference: {reference}")
+
+    social_card = docs_root / "assets" / "kavana-og.png"
+    with Image.open(social_card) as card:
+        if card.size != (1200, 630):
+            fail(f"social card must be 1200x630, got {card.size}")
+    sitemap = (docs_root / "sitemap.xml").read_text(encoding="utf-8")
+    if "https://kavana.pet/" not in sitemap or "https://kavana.pet/agents/" not in sitemap:
+        fail("sitemap is missing canonical Kavana URLs")
 
     docs_assets = docs_root / "assets"
     mirrored_assets = {
