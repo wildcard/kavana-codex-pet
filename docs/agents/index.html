@@ -47,7 +47,7 @@
           {
             "@type": "Question",
             "name": "How do I put Kavana on a website instead of the desktop app?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Use the Codex Pet Web SDK (codex-pet-companion). Point its Web Component at Kavana's two files: <codex-pet-companion manifest-url=\"/pets/kavana/pet.json\" atlas-url=\"/pets/kavana/spritesheet.webp\">. See pets.caro.sh." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Use the Codex Pet Web SDK (codex-pet-companion). Point its Web Component at Kavana's two files: <codex-pet-companion manifest-url=\"/codex-pets/kavana/pet.json\" atlas-url=\"/codex-pets/kavana/spritesheet.webp\">. See pets.caro.sh." }
           },
           {
             "@type": "Question",
@@ -107,10 +107,12 @@ ${CODEX_HOME:-$HOME/.codex}/pets/kavana/</code></pre>
     <section>
       <h2>Put Kavana on a website</h2>
       <p>Kavana's two files are a standard Codex pet package, so the Web SDK can render her on any site. Serve <code>pet.json</code> + <code>spritesheet.webp</code> and point the component at them:</p>
-      <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.1.1/dist/codex-pet-companion.global.js"&gt;&lt;/script&gt;
+      <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.3.1/dist/codex-pet-companion.global.js"
+  integrity="sha384-HCdZidL2jzxEW9SQR6w9TAZGehFjyRvAFQwUvc+nBeiFZdpNVy5sSRFZtQRZD4II"
+  crossorigin="anonymous"&gt;&lt;/script&gt;
 &lt;codex-pet-companion
-  manifest-url="/pets/kavana/pet.json"
-  atlas-url="/pets/kavana/spritesheet.webp"&gt;&lt;/codex-pet-companion&gt;</code></pre>
+  manifest-url="/codex-pets/kavana/pet.json"
+  atlas-url="/codex-pets/kavana/spritesheet.webp"&gt;&lt;/codex-pet-companion&gt;</code></pre>
       <p>Full web integration guide: <a href="https://pets.caro.sh/agents/">pets.caro.sh/agents/</a>.</p>
     </section>
 
