@@ -451,12 +451,21 @@
       dialogue: [{ id: 'hello', label: 'Hello', title: "Hi, I'm Kavana.", body: 'This card is rendered by the reusable Codex Pet Web SDK with my real local atlas.' }],
     };
     waveButton.addEventListener('click', () => pet.play('waving', { loop: false, returnTo: 'idle' }));
+    let roamRequested = false;
     zoomiesButton.addEventListener('click', async () => {
+      if (roamRequested) return;
+      roamRequested = true;
       zoomiesButton.disabled = true;
       zoomiesButton.setAttribute('aria-busy', 'true');
-      await pet.zoomies();
-      zoomiesButton.disabled = false;
-      zoomiesButton.removeAttribute('aria-busy');
+      zoomiesButton.textContent = 'Kavana is joining…';
+      const started = await pet.startRoaming();
+      if (started) zoomiesButton.remove();
+      else {
+        roamRequested = false;
+        zoomiesButton.disabled = false;
+        zoomiesButton.removeAttribute('aria-busy');
+        zoomiesButton.textContent = 'Try roaming again';
+      }
     });
   }
 
