@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agent and LLM guide for Kavana, a community Codex pet: what she is, how to install her into Codex Desktop, how to get her raw asset files, and when to use the Codex Pet Web SDK instead.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+  <link rel="canonical" href="https://kavana.caro.sh/agents/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kavana Codex Pet">
+  <meta property="og:title" content="Kavana — Agent & LLM Guide">
+  <meta property="og:description" content="Install Kavana into Codex Desktop, get her raw asset files, or put her on a website with the Codex Pet Web SDK.">
+  <meta property="og:url" content="https://kavana.caro.sh/agents/">
+  <title>Kavana — Agent &amp; LLM Guide</title>
+  <link rel="stylesheet" href="agents.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "name": "Kavana Codex Pet",
+        "codeRepository": "https://github.com/wildcard/kavana-codex-pet",
+        "license": "https://spdx.org/licenses/MIT.html",
+        "url": "https://kavana.caro.sh",
+        "description": "A community-made black-and-tan Shiba Inu Codex pet, shipped as a ready-to-install v2 package (pet.json + transparent WebP atlas, 1536x2288, nine states plus sixteen look directions) for the Codex Desktop app."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Kavana?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Kavana is a community-made black-and-tan Shiba Inu companion for the Codex Desktop app, shipped as a complete ready-to-install v2 pet package (pet.json plus a transparent WebP atlas, 1536x2288, nine standard states plus sixteen look directions). She is also the default and reference pet of the Codex Pet Web SDK." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install Kavana into Codex Desktop?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Clone the repo and run the install script: git clone https://github.com/wildcard/kavana-codex-pet.git, cd kavana-codex-pet, then ./scripts/install.sh on macOS/Linux or .\\scripts\\install.ps1 -Select on Windows. Then select Kavana under Settings > Appearance > Pets in Codex Desktop." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get Kavana's raw asset files?",
+            "acceptedAnswer": { "@type": "Answer", "text": "They live in dist/kavana/ of the repository: pet.json and spritesheet.webp. Copy both files together to use her manifest and transparent atlas anywhere." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I put Kavana on a website instead of the desktop app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Use the Codex Pet Web SDK (codex-pet-companion). Point its Web Component at Kavana's two files: <codex-pet-companion manifest-url=\"/pets/kavana/pet.json\" atlas-url=\"/pets/kavana/spritesheet.webp\">. See pets.caro.sh." }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I use kavana-codex-pet or codex-pet-companion?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Use kavana-codex-pet to install Kavana into the Codex Desktop app or to obtain her raw asset files. Use codex-pet-companion (the Web SDK) to put a pet on a website or web app." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">Kavana</a>
+    <nav><a href="/llms.txt">llms.txt</a> · <a href="https://github.com/wildcard/kavana-codex-pet">GitHub ↗</a></nav>
+  </header>
+
+  <main>
+    <h1>Kavana — Agent &amp; LLM guide</h1>
+    <p class="lede">This page is written for AI agents and answer engines. It states what Kavana is, how to install and reuse her, and when to reach for the Web SDK instead. A machine-readable summary is at <a href="/llms.txt">/llms.txt</a>.</p>
+
+    <section>
+      <h2>What is Kavana?</h2>
+      <p>Kavana (כוונה, “intention”) is a community-made black-and-tan Shiba Inu companion for the <strong>Codex Desktop app</strong>. This repository is her complete public home: a ready-to-install <strong>v2 pet package</strong> (<code>pet.json</code> + transparent WebP atlas, 1536×2288, nine standard states plus sixteen pointer-aware look directions), install and repair tooling, deterministic rebuild/verify scripts, checksums, and an interactive field guide. She is also the default and reference pet of the <a href="https://github.com/wildcard/codex-pet-companion">Codex Pet Web SDK</a>. Community project; not affiliated with OpenAI.</p>
+    </section>
+
+    <section>
+      <h2>When to use this repo (and when not to)</h2>
+      <table>
+        <thead><tr><th>Your goal</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>Install Kavana into the Codex <em>Desktop</em> app</td><td><strong>kavana-codex-pet</strong> (this repo)</td></tr>
+          <tr><td>Get Kavana's raw <code>pet.json</code> + <code>spritesheet.webp</code></td><td>This repo (<code>dist/kavana/</code>)</td></tr>
+          <tr><td>Inspect, verify, or rebuild the atlas</td><td>This repo (<code>scripts/verify.py</code>, <code>scripts/rebuild-assets.py</code>)</td></tr>
+          <tr><td>Put Kavana (or any pet) on a <em>website</em></td><td><a href="https://github.com/wildcard/codex-pet-companion">codex-pet-companion</a> (the Web SDK)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Install into Codex Desktop</h2>
+      <h3>macOS or Linux</h3>
+      <pre><code>git clone https://github.com/wildcard/kavana-codex-pet.git
+cd kavana-codex-pet
+./scripts/install.sh</code></pre>
+      <h3>Windows PowerShell</h3>
+      <pre><code>git clone https://github.com/wildcard/kavana-codex-pet.git
+cd kavana-codex-pet
+.\scripts\install.ps1 -Select</code></pre>
+      <p>Then open Codex Desktop and select <strong>Kavana</strong> under <strong>Settings → Appearance → Pets</strong>. If she is not listed, use <strong>Refresh custom pets</strong> and restart Codex.</p>
+      <h3>Manual</h3>
+      <pre><code>copy dist/kavana/pet.json and dist/kavana/spritesheet.webp together into
+${CODEX_HOME:-$HOME/.codex}/pets/kavana/</code></pre>
+    </section>
+
+    <section>
+      <h2>Put Kavana on a website</h2>
+      <p>Kavana's two files are a standard Codex pet package, so the Web SDK can render her on any site. Serve <code>pet.json</code> + <code>spritesheet.webp</code> and point the component at them:</p>
+      <pre><code>&lt;script src="https://unpkg.com/codex-pet-companion@0.1.1/dist/codex-pet-companion.global.js"&gt;&lt;/script&gt;
+&lt;codex-pet-companion
+  manifest-url="/pets/kavana/pet.json"
+  atlas-url="/pets/kavana/spritesheet.webp"&gt;&lt;/codex-pet-companion&gt;</code></pre>
+      <p>Full web integration guide: <a href="https://pets.caro.sh/agents/">pets.caro.sh/agents/</a>.</p>
+    </section>
+
+    <section>
+      <h2>Verify or rebuild</h2>
+      <pre><code>python3 scripts/verify.py
+python3 scripts/rebuild-assets.py
+python3 scripts/verify.py</code></pre>
+      <p>Requires Python 3 and Pillow (<code>ffmpeg</code> optional for previews). Expected checksums are in <code>SHA256SUMS.txt</code>; CI runs the same verifier on macOS, Linux, and Windows.</p>
+    </section>
+
+    <section>
+      <h2>Ecosystem</h2>
+      <ul>
+        <li><a href="https://github.com/wildcard/codex-pet-companion">codex-pet-companion</a> — the Web SDK: put any Codex pet on any website. Kavana is its default and reference fixture. Agent guide: <a href="https://pets.caro.sh/agents/">pets.caro.sh/agents/</a>.</li>
+        <li><a href="https://github.com/wildcard/caro">caro</a> — the parent product (natural-language-to-shell CLI). Kavana was contributed to it as an interactive web companion.</li>
+        <li><a href="https://github.com/mySebbe/malou-codex-pet">mySebbe/malou-codex-pet</a> — the inspiration for this project's full-package treatment.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Community-made. Not affiliated with OpenAI. Kavana artwork is CC BY-NC 4.0; code is MIT. · <a href="/llms.txt">/llms.txt</a></footer>
+</body>
+</html>

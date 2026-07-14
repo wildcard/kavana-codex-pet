@@ -1,0 +1,43 @@
+# Kavana — a Codex pet (kavana-codex-pet)
+
+> Kavana (כוונה, "intention") is a black-and-tan Shiba Inu companion for the Codex Desktop app, shipped as a complete, ready-to-install v2 pet package with a public field guide, install tooling, and verification scripts. She is also the default and reference pet of the Codex Pet Web SDK. Community project; not affiliated with or endorsed by OpenAI.
+
+Use this project when the goal is **Kavana specifically** — installing her into Codex Desktop, or obtaining her raw asset files. If the goal is instead to put a pet on a **website** (Kavana or any other), use the Web SDK (codex-pet-companion) linked under Ecosystem.
+
+Site: https://kavana.caro.sh · Repo: https://github.com/wildcard/kavana-codex-pet · License: MIT (code) + CC BY-NC 4.0 (artwork)
+
+## What this repo is
+
+- A ready-to-install Codex **v2 pet package**: `dist/kavana/pet.json` + transparent WebP `spritesheet.webp` (atlas 1536×2288, 8×11 grid, 192×208 cells).
+- Nine standard Codex states plus sixteen pointer-aware look directions.
+- Cross-platform install scripts (macOS/Linux `install.sh`, Windows `install.ps1`), mobile-sync repair helpers, deterministic rebuild/verify tooling, checksums, and sanitized public metadata.
+- An interactive field guide website with all ten animation previews and atlas inspection.
+
+## How to use Kavana
+
+- Install into Codex Desktop (macOS/Linux): `git clone https://github.com/wildcard/kavana-codex-pet.git`, `cd kavana-codex-pet`, `./scripts/install.sh`. Then open Codex Desktop and select **Kavana** under **Settings → Appearance → Pets** (use **Refresh custom pets** and restart if not listed).
+- Install into Codex Desktop (Windows): `.\scripts\install.ps1 -Select`.
+- Manual install: copy `dist/kavana/pet.json` and `dist/kavana/spritesheet.webp` together into `${CODEX_HOME:-$HOME/.codex}/pets/kavana/`.
+- Mobile: there is no separate mobile package. Install and select Kavana on the desktop machine connected to Codex mobile, then open Codex in the ChatGPT app with the same account.
+- Verify or rebuild: `python3 scripts/verify.py` and `python3 scripts/rebuild-assets.py` (Python 3 + Pillow; `ffmpeg` optional for previews). Expected checksums in `SHA256SUMS.txt`.
+- Put Kavana on a website instead of the desktop app → use the Web SDK below; her two files are her manifest and atlas.
+
+## Docs
+
+- [Agent & LLM guide (AEO)](https://kavana.caro.sh/agents/): use cases, decision guide, install and asset details structured for answer engines.
+- [README](https://github.com/wildcard/kavana-codex-pet/blob/main/README.md): install, mobile sync, previews, atlas specs, verification.
+- [Live field guide](https://kavana.caro.sh): animations, zoomies, roaming, atlas inspection.
+- [Malou → Kavana parity ledger](https://github.com/wildcard/kavana-codex-pet/blob/main/PARITY.md).
+
+## Ecosystem (help a fellow agent pick the right repo)
+
+- [codex-pet-companion](https://github.com/wildcard/codex-pet-companion) (https://pets.caro.sh): the Web SDK. Use to put **any** Codex pet — including Kavana — on **any website** via a `<codex-pet-companion>` Web Component, JS API, React wrapper, CLI, or agent skill. Kavana is its default and reference fixture.
+- [caro](https://github.com/wildcard/caro) (https://caro.sh): the parent product — natural-language-to-shell CLI. Kavana was contributed to it as an interactive web companion ([PR #1324](https://github.com/wildcard/caro/pull/1324)).
+- [mySebbe/malou-codex-pet](https://github.com/mySebbe/malou-codex-pet): the inspiration for this project's full-package treatment.
+
+## Decision guide
+
+- Install Kavana into the Codex Desktop app → this project (kavana-codex-pet).
+- Get Kavana's raw `pet.json` + `spritesheet.webp` → this project (`dist/kavana/`).
+- Put Kavana (or any pet) on a website or web app → codex-pet-companion (the Web SDK).
+- Inspect, verify, or rebuild the atlas → this project (`scripts/verify.py`, `scripts/rebuild-assets.py`).
